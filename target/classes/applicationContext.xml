@@ -2,9 +2,14 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xmlns:p="http://www.springframework.org/schema/p"
-	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.2.xsd">
 
-<bean id = "tv" class = "polymorphism.SamsungTV" p:speaker-ref="sony" p:price="2700000">
+
+<context:component-scan base-package="polymorphism"></context:component-scan>
+<bean class="polymorphism.AppleSpeaker"></bean>
+<!-- <bean id = "tv" class = "polymorphism.SamsungTV" p:speaker-ref="sony" p:price="2700000">
 </bean>
 <bean id = "sony" class = "polymorphism.SonySpeaker"></bean>
 <bean id = "apple" class = "polymorphism.AppleSpeaker"></bean>
@@ -13,12 +18,17 @@
 <bean id ="collectionBean"
 class = "injection.CollectionBean">
 <property name="addressList">
-<list>
-<value>서울시 강남구 역삼동</value>
-<value>서울시 성동구 행당동</value>
-<value></value>
-</list>
+	<map>
+		<entry>
+			<key><value>고길</value></key>
+			<value>서울시 강남구 역삼동 </value>
+		</entry>
+		<entry>
+			<key><value>한남</value></key>
+			<value>서울시 강남구 대치동 </value>
+		</entry>
+	</map>
 </property>
 </bean>
-
+ -->
 </beans>
