@@ -13,8 +13,8 @@ public class UserServiceClient {
 		UserService userService = (UserService)container.getBean("userService");
 		
 		UserVO vo = new UserVO();
-		vo.setId("user");
-		vo.setPassword("user1");
+		vo.setId("test");
+		vo.setPassword("test123");
 		
 		UserVO user =userService.getUser(vo);
 		if(user!=null) {
