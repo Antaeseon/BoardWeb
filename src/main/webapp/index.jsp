@@ -10,5 +10,6 @@
 	<hr>
 	 <a href ="login.do">로그인</a><br><br><br>
 	 <a href ="getBoardList.do">글 목록 가져오기</a>
+	 <a href ="dataTransform.do">글 목록 변환 처리</a>
 </body>
 </html>
